@@ -378,7 +378,7 @@ function MealsGrid({ meals, dayColor }) {
             </strong>{" "}
             {val.text}
             {val.detail && <div style={{ fontSize: 12, color: "#A69E95", marginTop: 2 }}>{val.detail}</div>}
-            {val.tip && <Tip color={dayColor.main}>{val.tip}</Tip>}
+            {val.tip && !val.recipe && <Tip color={dayColor.main}>{val.tip}</Tip>}
             {val.recipe && <RecipeCard title={val.text} tip={val.tip} dayColor={dayColor} />}
           </div>
         ))}
@@ -466,10 +466,10 @@ function DayCard({ day, isExpanded, onToggle, staggerClass }) {
           )}
 
           {/* Morning */}
-          <SectionBlock label="Morning \u2014 Primary Adventure" borderColor={day.color.main}>
+          <SectionBlock label="Morning — Primary Adventure" borderColor={day.color.main}>
             <SectionTitle>{day.morning.title}</SectionTitle>
-            {day.morning.location && <Meta icon="\ud83d\udccd">{day.morning.location}</Meta>}
-            <Meta icon="\u23f1">{day.morning.time}</Meta>
+            {day.morning.location && <Meta icon="📍">{day.morning.location}</Meta>}
+            <Meta icon="⏱">{day.morning.time}</Meta>
             <BulletList items={day.morning.details} />
             {day.morning.backup && <Backup>{day.morning.backup}</Backup>}
             {day.morning.tip && <Tip color={day.color.main}>{day.morning.tip}</Tip>}
