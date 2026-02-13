@@ -26,34 +26,43 @@ const DAYS = [
       tip: "Budget 30 min for the sandy-kid-to-car transition.",
     },
     afternoon: {
-      title: "Nap Time + Recovery",
-      items: ["Isabelle naps at noon", "Older kids: quiet play / drawing / LEGO / screens", "Adults rotate downtime \u2014 prep lunch, recharge"],
-      note: "Protect energy for date night tonight.",
+      title: "Nap \u2192 Downtown Split",
+      items: [
+        "Isabelle naps at noon \u2014 everyone recharges",
+        "Post-nap: Kim & Blake take 3 kids to Mesa playground (mellow, shaded, contained)",
+        "Adrian & Alex walk State Street \u2014 coffee, browse, mini date",
+        "Regroup ~4:00 PM at home for handoff before date night",
+      ],
+      note: "Kim & Blake leave for The Lark at 5 PM \u2014 Adrian & Alex prep fajitas + handle bedtime.",
     },
     evening: {
       title: "Date Night", subtitle: "Kim & Blake", isDateNight: true,
       plan: [
-        "Kim does Isabelle\u2019s bedtime routine before leaving",
-        "Walk by the water at sunset \u2014 Shoreline Park for quieter vibes",
-        "Relaxed dinner at The Lark",
-        "One drink \u2192 home early",
+        "Kim & Blake head out at 5:00 PM \u2014 holiday weekend, aim for bar seats early",
+        "Walk the Funk Zone before or after dinner",
+        "Adrian & Alex handle all 3 kids: fajitas, bath, bedtime",
+        "No bedtime handoff needed \u2014 clean departure for Kim & Blake",
       ],
       restaurant: {
         name: "The Lark", topPick: true, address: "131 Anacapa St",
         desc: "New American \u00b7 Family-style \u00b7 Historic Fish Market building",
         price: "$50\u2013100/pp",
         highlights: ["Brown butter cornbread", "Crispy Brussels sprouts", "Handmade pappardelle", "Flat iron steak"],
-        reserve: "OpenTable / Resy or (805) 284-0370",
-        note: "Fire pit patio seating",
+        reserve: "Aim for bar seats at 5 PM \u2014 holiday weekend, no reservation needed for bar",
+        note: "Fire pit patio seating \u00b7 Bar is first-come first-served",
       },
-      altRestaurant: { name: "Loquita", address: "202 State St", desc: "Spanish Tapas \u00b7 Wood-fired \u00b7 Paella", tip: "Request patio \u2014 can be loud inside. Earlier seating for quieter vibe." },
-      whyFriday: "Everyone fresh \u00b7 Sets weekend tone \u00b7 Saturday stays family-focused",
+      backupRestaurants: [
+        { name: "Loquita", address: "202 State St", desc: "Spanish tapas \u00b7 Wood-fired \u00b7 Great gin & tonics", tip: "2 blocks from The Lark. Bar seats usually available. Patio is gorgeous." },
+        { name: "Bibi Ji", address: "628 State St", desc: "Indian street food \u00b7 Michelin Guide \u00b7 Cocktail-forward", tip: "Upstairs on State. Fun, vibrant atmosphere. Shareable plates work great at the bar." },
+        { name: "Lucky Penny", address: "127 Anacapa St", desc: "Wood-fired pizza \u00b7 Craft cocktails \u00b7 Funk Zone", tip: "Right next to The Lark. Casual but excellent. Easy walk-in, never a long wait." },
+      ],
+      whyFriday: "Everyone fresh \u00b7 Sets weekend tone \u00b7 5 PM = best shot at bar seats",
     },
     meals: {
       breakfast: { text: "Yogurt, berries, toast, coffee", tip: "Ready by 8:15 \u2014 beach at 9" },
       lunch: { text: "Build-your-own wraps", detail: "Deli turkey, hummus, cheese, veggies, chips \u2014 kids customize" },
-      kidsDinner: { text: "Sheet Pan Chicken Fajitas w/ Creamy Verde Sauce", tip: "Prep before Kim & Blake leave. Season chicken, chop veggies, have it sheet-pan-ready. Slide in oven at 5:30.", recipe: true },
-      adultDinner: { text: "The Lark (Kim & Blake) \u00b7 Adrian & Alex eat with kids or after bedtime" },
+      kidsDinner: { text: "Sheet Pan Chicken Fajitas w/ Creamy Verde Sauce", tip: "Adrian & Alex prep before Kim & Blake leave at 5. Season chicken, chop veggies, sheet-pan-ready. Oven at 5:30.", recipe: true },
+      adultDinner: { text: "The Lark bar (Kim & Blake) \u00b7 Adrian & Alex eat with kids or after bedtime" },
     },
   },
   {
@@ -82,18 +91,29 @@ const DAYS = [
     },
   },
   {
-    id: "sunday", label: "Sunday", tagline: "Butterfly Beach + Brunch Send-Off", color: P.sunday,
+    id: "sunday", label: "Sunday", tagline: "Butterfly Beach + Tide Pools + Brunch Send-Off", color: P.sunday,
     morning: {
-      title: "Butterfly Beach & Tide Pool Scramble", location: "Butterfly Beach \u2192 Channel Drive tide pools",
+      title: "Butterfly Beach Morning", location: "Butterfly Beach, Montecito",
       time: "~9:00\u201311:15 AM \u2014 home by noon for nap",
-      details: ["Start at Butterfly Beach \u2014 calmer waves, great for littles", "Walk east along rocks to explore tide pools at low tide", "Sea stars, hermit crabs, anemones \u2014 7-year-old paradise", "Split: 2 adults with tide pool crew, 2 with sand crew (Isabelle)"],
+      details: [
+        "Calmer waves, great for littles \u2014 gorgeous sandy beach",
+        "Running and splash zone for the older kids",
+        "4 adults = easy rotation for coffee/snack runs",
+        "No tide pools this morning \u2014 tide is HIGH at 9 AM (~5 ft)",
+      ],
       backup: "SB Zoo morning \u2014 stroller-friendly, shaded, contained",
-      tip: "Check tide chart \u2014 need low tide below +1 ft. Tide pools not stroller-friendly.",
+      tip: "Tide pools move to afternoon \u2014 see below.",
     },
     afternoon: {
-      title: "Brunch Board + Pack Up",
-      items: ["Start packing BEFORE brunch \u2014 load car while Isabelle naps", "Ultimate Spring Brunch Board while she sleeps", "Scramble eggs last minute, lay everything out", "Slow final sweep, say goodbye"],
-      note: "Keep it simple and warm.",
+      title: "Tide Pools + Brunch Board + Pack Up",
+      items: [
+        "Isabelle naps at noon \u2014 start packing & load car while she sleeps",
+        "~2:30 PM: Tide pool trip to Channel Drive! Low tide hits -0.75 ft at ~3 PM",
+        "Split: 2 adults + older kids to pools, 1 adult stays with Isabelle",
+        "Sea stars, hermit crabs, anemones \u2014 best tide of the weekend",
+        "Home by 3:30 \u2192 Brunch Board spread \u2192 final pack \u2192 goodbye",
+      ],
+      note: "The negative tide is incredible \u2014 don\u2019t skip this. Quick 45-min trip while it\u2019s super low.",
     },
     evening: null,
     meals: {
@@ -103,9 +123,9 @@ const DAYS = [
 ];
 
 const ACTION_ITEMS = [
-  { text: "Book The Lark \u2014 Friday 7:00 or 7:30 PM", urgent: true, detail: "Resy / OpenTable / (805) 284-0370" },
+  { text: "The Lark bar plan \u2014 Friday 5:00 PM arrival", urgent: true, detail: "Bar is first-come, no reservation. Holiday weekend = go early. 3 backups if packed." },
   { text: "Buy Lil\u2019 Toot tickets \u2014 Saturday 10:45 AM", urgent: true, detail: "Saturday morning sells out" },
-  { text: "Check Sunday tide chart", urgent: false, detail: "Need low tide below +1 ft in the morning" },
+  { text: "Sunday tide pools at ~2:30 PM", urgent: false, detail: "Low tide -0.75 ft at ~3 PM. Morning is HIGH tide (5+ ft) \u2014 no pools until afternoon." },
   { text: "Grocery run", urgent: false, detail: "Thursday night or Friday morning?" },
   { text: "Confirm Kim & Alex departure time Sunday", urgent: false, detail: "Affects whether morning beach happens" },
   { text: "Pack beach gear", urgent: false, detail: "Shade tent, towels, sand toys, sunscreen, rash guards, hats" },
@@ -413,6 +433,14 @@ function DayCard({ day, isExpanded, onToggle, staggerClass }) {
               {day.evening.subtitle && <div style={{ fontSize: 13, color: "#78716C", marginBottom: 6 }}>{day.evening.subtitle}</div>}
               <BulletList items={day.evening.plan} />
               {day.evening.restaurant && <RestaurantCard restaurant={day.evening.restaurant} />}
+              {day.evening.backupRestaurants && (
+                <div style={{ marginTop: 12 }}>
+                  <div style={{ ...s.label, fontSize: 9, marginBottom: 8, color: "#A8A29E" }}>If The Lark bar is packed</div>
+                  {day.evening.backupRestaurants.map((alt, i) => (
+                    <AltRestaurant key={i} alt={alt} />
+                  ))}
+                </div>
+              )}
               {day.evening.altRestaurant && <AltRestaurant alt={day.evening.altRestaurant} />}
               {day.evening.whyFriday && <div style={{ marginTop: 10, fontSize: 12, color: "#A8A29E", fontStyle: "italic" }}>{day.evening.whyFriday}</div>}
             </SectionBlock>
